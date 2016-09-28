@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E924CC901D9C381400DFB962 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = E924CC8F1D9C381400DFB962 /* Calculator.m */; };
+		E924CC941D9C383200DFB962 /* ScientificCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = E924CC931D9C383200DFB962 /* ScientificCalculator.m */; };
 		E9BDA2231D9AD7CE0051EBE3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9BDA2221D9AD7CE0051EBE3 /* main.m */; };
 		E9BDA2261D9AD7CE0051EBE3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9BDA2251D9AD7CE0051EBE3 /* AppDelegate.m */; };
 		E9BDA2291D9AD7CE0051EBE3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9BDA2281D9AD7CE0051EBE3 /* ViewController.m */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E924CC8E1D9C381400DFB962 /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Calculator.h; path = AddTwoNumbers/Calculator.h; sourceTree = "<group>"; };
+		E924CC8F1D9C381400DFB962 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Calculator.m; path = AddTwoNumbers/Calculator.m; sourceTree = "<group>"; };
+		E924CC921D9C383200DFB962 /* ScientificCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScientificCalculator.h; sourceTree = "<group>"; };
+		E924CC931D9C383200DFB962 /* ScientificCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScientificCalculator.m; sourceTree = "<group>"; };
 		E9BDA21E1D9AD7CE0051EBE3 /* AddTwoNumbers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddTwoNumbers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9BDA2221D9AD7CE0051EBE3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E9BDA2241D9AD7CE0051EBE3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,9 +84,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E924CC911D9C381D00DFB962 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				E924CC8E1D9C381400DFB962 /* Calculator.h */,
+				E924CC8F1D9C381400DFB962 /* Calculator.m */,
+				E924CC921D9C383200DFB962 /* ScientificCalculator.h */,
+				E924CC931D9C383200DFB962 /* ScientificCalculator.m */,
+			);
+			name = Calculator;
+			sourceTree = "<group>";
+		};
 		E9BDA2151D9AD7CE0051EBE3 = {
 			isa = PBXGroup;
 			children = (
+				E924CC911D9C381D00DFB962 /* Calculator */,
 				E9BDA2201D9AD7CE0051EBE3 /* AddTwoNumbers */,
 				E9BDA23A1D9AD7CE0051EBE3 /* AddTwoNumbersTests */,
 				E9BDA2451D9AD7CE0051EBE3 /* AddTwoNumbersUITests */,
@@ -274,6 +292,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9BDA2291D9AD7CE0051EBE3 /* ViewController.m in Sources */,
+				E924CC941D9C383200DFB962 /* ScientificCalculator.m in Sources */,
+				E924CC901D9C381400DFB962 /* Calculator.m in Sources */,
 				E9BDA2261D9AD7CE0051EBE3 /* AppDelegate.m in Sources */,
 				E9BDA2231D9AD7CE0051EBE3 /* main.m in Sources */,
 			);
@@ -507,6 +527,7 @@
 				E9BDA24D1D9AD7CE0051EBE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E9BDA24E1D9AD7CE0051EBE3 /* Build configuration list for PBXNativeTarget "AddTwoNumbersTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +536,7 @@
 				E9BDA2501D9AD7CE0051EBE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E9BDA2511D9AD7CE0051EBE3 /* Build configuration list for PBXNativeTarget "AddTwoNumbersUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +545,7 @@
 				E9BDA2531D9AD7CE0051EBE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
