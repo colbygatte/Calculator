@@ -38,37 +38,42 @@
 
 
 
--(IBAction) addButtonPressed {
-    operateOn = [self.answer.text doubleValue];
-    operation = 0;
+
+-(IBAction) operationButtonPressed:(id) sender {
+    
+    UIButton *button = (UIButton *) sender;
+    NSString *oper = button.titleLabel.text;
+    
+    if([oper isEqualToString:@"Add"]) {
+        
+        operateOn = [self.answer.text doubleValue];
+        operation = 0;
+        
+    } else if([oper isEqualToString:@"Subtract"]) {
+        
+        operateOn = [self.answer.text doubleValue];
+        operation = 1;
+        
+    } else if ([oper isEqualToString:@"Multiply"]) {
+        
+        operateOn = [self.answer.text doubleValue];
+        operation = 3;
+        
+    } else if ([oper isEqualToString:@"Divide"]) {
+        
+        operateOn = [self.answer.text doubleValue];
+        operation = 2;
+        
+    } else { // Gotta be "Mod"
+        
+        operateOn = [self.answer.text doubleValue];
+        operation = 4;
+    }
+    
     [self updateAnswer:0];
     
 }
 
--(IBAction) subtractButtonPressed {
-    
-    operateOn = [self.answer.text doubleValue];
-    operation = 1;
-    [self updateAnswer:0];
-}
-
--(IBAction) divideButtonPressed {
-    operateOn = [self.answer.text doubleValue];
-    operation = 2;
-    [self updateAnswer:0];
-}
-
--(IBAction) multiplyButtonPressed {
-    operateOn = [self.answer.text doubleValue];
-    operation = 3;
-    [self updateAnswer:0];
-}
-
--(IBAction) modButtonPressed {
-    operateOn = [self.answer.text doubleValue];
-    operation = 4;
-    [self updateAnswer:0];
-}
 
 -(IBAction) resetCalc {
     self.answer.text = @"0";
@@ -86,14 +91,17 @@
             double answer = [calc subtract:operateOn secondNumber:[self.answer.text doubleValue]];
             [self updateAnswer:answer];
             break;}
+            
         case 2 :{
             double answer = [calc divide:operateOn secondNumber:[self.answer.text doubleValue]];
             [self updateAnswer:answer];
             break;}
+            
         case 3 :{
             double answer = [calc multiply:operateOn secondNumber:[self.answer.text doubleValue]];
             [self updateAnswer:answer];
             break;}
+            
         case 4:{
             double answer = [scalc mod:operateOn secondNumber:[self.answer.text intValue]];
             [self updateAnswer:answer];
@@ -114,35 +122,14 @@
     }
 }
 
--(IBAction) calc1 {
-    [self addNumberPress:1];
-}
--(IBAction) calc2 {
-    [self addNumberPress:2];
-}
--(IBAction) calc3 {
-    [self addNumberPress:3];
-}
--(IBAction) calc4 {
-    [self addNumberPress:4];
-}
--(IBAction) calc5 {
-    [self addNumberPress:5];
-}
--(IBAction) calc6 {
-    [self addNumberPress:6];
-}
--(IBAction) calc7 {
-    [self addNumberPress:7];
-}
--(IBAction) calc8 {
-    [self addNumberPress:8];
-}
--(IBAction) calc9 {
-    [self addNumberPress:9];
-}
--(IBAction) calc0 {
-    [self addNumberPress:0];
+// Here is where number presses are calcuated
+-(IBAction) numPress:(id) sender {
+    UIButton *button = (UIButton *) sender;
+    
+    NSString *num = button.titleLabel.text;
+    [self addNumberPress:num.intValue];
+    
+    
 }
 
 
